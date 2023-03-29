@@ -15,21 +15,21 @@
         </div>
         <div class="header-info">
           <h1>Stelian Rosca</h1>
-          <h2>Software Developer @ OSS</h2>
+          <h2 id="job-title">Software Developer @ OSS</h2>
         </div>
       </div>
       <ul id="top-menu-bar">
         <li>
-          <a href="">Home</a>
+          <a href="#">Home</a>
         </li>
         <li>
-          <a href="">Skills</a>
+          <a href="#" onclick="showSkills()">Skills</a>
         </li>
         <li>
-          <a href="">Projects</a>
+          <a href="#">Projects</a>
         </li>
         <li>
-          <a href="">Languages</a>
+          <a href="#">Languages</a>
         </li>
       </ul>
     </header>
@@ -52,7 +52,12 @@
         </section>
         <section>m2</section>
       </div>
-      <div id="main">main</div>
+      <div id="main">
+        <div id="home" class="page">Home</div>
+        <div id="skills" class="page">Skills</div>
+        <div id="projects" class="page">Projects</div>
+        <div id="languages" class="page">Languages</div>
+      </div>
     </section>
 
     <footer>
@@ -62,5 +67,6 @@
         </li>
       </ul>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -46,8 +46,18 @@ h2 {
 }
 
 #main {
+  display: flex;
   flex: 3;
   padding: 10px 10px 10px 0px;
+  flex-direction: column;
+}
+
+.page {
+  background-color: #ccc;
+  flex: 1;
+  padding: 20px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  display: none;
 }
 
 #top-menu-bar,

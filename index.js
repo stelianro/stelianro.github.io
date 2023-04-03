@@ -3,30 +3,38 @@ var activePage = "home";
 var homePage = document.getElementById(activePage);
 homePage.style.display = "block";
 
+function hidePage(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+function showPage(id) {
+  document.getElementById(id).style.display = "block";
+}
+
 function showHome() {
-  document.getElementById("home").style.display = "block";
-  document.getElementById("skills").style.display = "none";
-  document.getElementById("projects").style.display = "none";
-  document.getElementById("languages").style.display = "none";
+  showPage("home");
+  hidePage("skills");
+  hidePage("projects");
+  hidePage("languages");
 }
 
 function showSkills() {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("skills").style.display = "block";
-  document.getElementById("projects").style.display = "none";
-  document.getElementById("languages").style.display = "none";
+  showPage("skills");
+  hidePage("home");
+  hidePage("projects");
+  hidePage("languages");
 }
 
 function showProjects() {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("skills").style.display = "none";
-  document.getElementById("projects").style.display = "block";
-  document.getElementById("languages").style.display = "none";
+  showPage("projects");
+  hidePage("home");
+  hidePage("skills");
+  hidePage("languages");
 }
 
 function showLanguages() {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("skills").style.display = "none";
-  document.getElementById("projects").style.display = "none";
-  document.getElementById("languages").style.display = "block";
+  showPage("languages");
+  hidePage("home");
+  hidePage("skills");
+  hidePage("projects");
 }

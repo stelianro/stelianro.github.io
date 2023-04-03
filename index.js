@@ -47,7 +47,6 @@ function showSkills() {
   var html = skills.map(function (skill) {
     return `<li>${skill.name} - <span class="endorsements">${skill.endorsements}</span></li>`;
   });
-  console.warn(html);
 
   var container = document.querySelector("#skills ul");
   container.innerHTML = html.join("");

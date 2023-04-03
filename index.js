@@ -1,4 +1,4 @@
-var activePage = "home";
+var activePage = "skills";
 
 var homePage = document.getElementById(activePage);
 homePage.style.display = "block";
@@ -28,3 +28,14 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
     showPage(id);
   }
 });
+
+function showSkills() {
+  var skills = ["HTML", "CSS", "JS"];
+  var container = document.querySelector("#skills ul");
+  console.info(container, skills);
+  skills.forEach(function (skill) {
+    container.innerHTML += `<li>${skill}</li>`;
+  });
+}
+
+showSkills();

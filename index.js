@@ -29,21 +29,7 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
   }
 });
 
-function showSkills() {
-  var skills = [
-    {
-      name: "HTML",
-      endorsements: 5,
-    },
-    {
-      name: "CSS",
-      endorsements: 1,
-    },
-    {
-      name: "JS",
-      endorsements: 2,
-    },
-  ];
+function showSkills(skills) {
   var html = skills.map(function (skill) {
     return `<li>${skill.name} - <span class="endorsements">${skill.endorsements}</span></li>`;
   });
@@ -52,4 +38,11 @@ function showSkills() {
   container.innerHTML = html.join("");
 }
 
-showSkills();
+fetch("skills.json")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (skills) {
+    console.warn("skills", skills);
+    showSkills(skills);
+  });

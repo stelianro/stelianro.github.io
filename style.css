@@ -94,3 +94,11 @@ footer {
 .endorsements {
   color: blue;
 }
+
+li.important {
+  font-weight: bold;
+}
+
+li.important .endorsements {
+  color: green;
+}

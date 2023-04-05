@@ -48,3 +48,6 @@ function loadSkills() {
       showSkills(skills);
     });
 }
+
+loadSkills();
+//TODO loadLanguages();

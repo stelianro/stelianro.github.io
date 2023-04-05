@@ -35,8 +35,8 @@ function showSkills(skills) {
     // return a.name.localeCompare(b.name);
   });
   var html = skills.map(function (skill) {
-    var cls = skill.endorsements > 5 ? 'class="important"' : "";
-    return `<li ${cls}>${skill.name} - <span class="endorsements">${skill.endorsements}</span></li>`;
+    var cls = skill.endorsements > 5 ? "important" : "";
+    return `<li class="${cls}">${skill.name} - <span class="endorsements">${skill.endorsements}</span></li>`;
   });
 
   var container = document.querySelector("#skills ul");

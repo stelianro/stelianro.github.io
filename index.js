@@ -38,11 +38,13 @@ function showSkills(skills) {
   container.innerHTML = html.join("");
 }
 
-fetch("skills.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (skills) {
-    console.warn("skills", skills);
-    showSkills(skills);
-  });
+function loadSkills() {
+  fetch("skills.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (skills) {
+      console.warn("skills", skills);
+      showSkills(skills);
+    });
+}

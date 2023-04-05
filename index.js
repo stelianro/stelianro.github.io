@@ -30,6 +30,10 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
 });
 
 function showSkills(skills) {
+  skills.sort(function (a, b) {
+    return b.endorsements - a.endorsements;
+    // return a.name.localeCompare(b.name);
+  });
   var html = skills.map(function (skill) {
     return `<li>${skill.name} - <span class="endorsements">${skill.endorsements}</span></li>`;
   });

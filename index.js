@@ -35,10 +35,7 @@ function showSkills(skills) {
     // return a.name.localeCompare(b.name);
   });
   var html = skills.map(function (skill) {
-    var cls = "important";
-    if (skill.endorsements > 5) {
-      cls = 'class="important"';
-    }
+    var cls = skill.endorsements > 5 ? 'class="important"' : "";
     return `<li ${cls}>${skill.name} - <span class="endorsements">${skill.endorsements}</span></li>`;
   });
 

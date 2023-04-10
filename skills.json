@@ -10,5 +10,9 @@
   {
     "name": "JS",
     "endorsements": 12
+  },
+  {
+    "name": "TS",
+    "endorsements": 1
   }
 ]

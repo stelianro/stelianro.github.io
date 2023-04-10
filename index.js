@@ -39,7 +39,7 @@ function showSkills(skills) {
     return `<li class="${cls}">
       ${
         skill.name
-      } ${skill.endorcements < 2 ? "" : `- <span class="endorcements">${skill.endorcements}</span>`}
+      } ${skill.endorsements < 2 ? "" : `- <span class="endorcements">${skill.endorsements}</span>`}
     </li>`;
   });
 

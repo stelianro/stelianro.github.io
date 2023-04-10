@@ -1,5 +1,7 @@
 var activePage = "skills";
 
+showPage(activePage);
+
 var homePage = document.getElementById(activePage);
 homePage.style.display = "block";
 
@@ -15,11 +17,18 @@ function hideAllPages() {
   pages.forEach(function (page) {
     hide(page.id);
   });
+  var link = document.querySelector(
+    `#top-menu-bar a[data-page="${activePage}"]`
+  );
+  link.classList.remove("active");
 }
 
 function showPage(id) {
   hideAllPages();
   show(id);
+  var link = document.querySelector(`#top-menu-bar a[data-page="${id}"]`);
+  link.classList.add("active");
+  activePage = id;
 }
 
 document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
@@ -32,7 +41,6 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
 function showSkills(skills) {
   skills.sort(function (a, b) {
     return b.endorsements - a.endorsements;
-    // return a.name.localeCompare(b.name);
   });
   var html = skills.map(function (skill) {
     var cls = skill.endorsements > 5 ? "important" : "";

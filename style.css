@@ -85,6 +85,7 @@ footer {
   margin: 2px 0;
 }
 
+#top-menu-bar a.active,
 #top-menu-bar a:hover,
 #footer-menu-bar a:hover {
   background-color: #fff;
